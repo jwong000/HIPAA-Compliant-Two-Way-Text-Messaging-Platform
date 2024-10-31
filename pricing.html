@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Pricing</h2>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Free Plan</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>100 messages per month</li>
+                    <li>Basic support</li>
+                    <li>Access to core features</li>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Pro Plan</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>1000 messages per month</li>
+                    <li>Priority support</li>
+                    <li>Advanced analytics</li>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Enterprise Plan</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">$99 <small class="text-muted">/ mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Unlimited messages</li>
+                    <li>24/7 support</li>
+                    <li>Custom integrations</li>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Messages</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">From</th>
+            <th scope="col">Message</th>
+            <th scope="col">Received At</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for message in messages %}
+        <tr>
+            <td>{{ message.from_number }}</td>
+            <td>{{ message.body }}</td>
+            <td>{{ message.timestamp }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

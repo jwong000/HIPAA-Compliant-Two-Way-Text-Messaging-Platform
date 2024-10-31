@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to TextCampaign!</h1>
+    <p class="lead">Your all-in-one solution for personalized text message campaigns.</p>
+    <hr class="my-4">
+    <p>Sign up today to start sending customized text campaigns with ease.</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('register') }}" role="button">Get Started</a>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Send Campaign</h2>
+<form method="POST" action="{{ url_for('send_campaign') }}">
+    <div class="form-group">
+        <label for="message_template">Message Template</label>
+        <textarea class="form-control" id="message_template" name="message_template" rows="4" placeholder="Hi {name}, this is a reminder for..."></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send Campaign</button>
+</form>
+{% endblock %}

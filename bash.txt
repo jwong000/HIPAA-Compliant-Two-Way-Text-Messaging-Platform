@@ -1,0 +1,16 @@
+/project_directory
+    /static
+        /css
+            styles.css
+    /templates
+        base.html
+        home.html
+        login.html
+        register.html
+        dashboard.html
+        upload.html
+        send_campaign.html
+        verify_otp.html
+        pricing.html
+        messages.html
+    app.py

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Verify OTP</h2>
+<p>Please enter the One-Time Password (OTP) sent to your phone.</p>
+<form method="POST" action="{{ url_for('verify_otp') }}">
+    <div class="form-group">
+        <label for="otp">One-Time Password</label>
+        <input type="text" class="form-control" id="otp" name="otp" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Verify</button>
+</form>
+{% endblock %}
