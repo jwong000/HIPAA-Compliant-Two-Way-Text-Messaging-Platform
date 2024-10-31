@@ -1,4 +1,5 @@
 HIPAA-Compliant Two-Way Text Messaging Platform
+
 This is a Flask-based web application for creating HIPAA-compliant, two-way SMS campaigns using Twilio. It includes secure user registration, two-factor authentication (2FA), and encrypted data handling for contacts and messages, with options to upload contact lists and send personalized SMS campaigns.
 
 Features
