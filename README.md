@@ -24,7 +24,6 @@ Installation Steps
 Clone the repository:
 
 bash
-Copy code
 git clone https://github.com/yourusername/yourproject.git
 cd yourproject
 Create a virtual environment:
@@ -43,7 +42,6 @@ Configure PostgreSQL Database:
 Create a new PostgreSQL database and user:
 
 bash
-Copy code
 sudo -u postgres psql
 CREATE DATABASE your_database_name;
 CREATE USER your_rds_user WITH PASSWORD 'your_rds_password';
@@ -51,7 +49,6 @@ GRANT ALL PRIVILEGES ON DATABASE your_database_name TO your_rds_user;
 Update the database URI in app.py:
 
 python
-Copy code
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://your_rds_user:your_rds_password@localhost/your_database_name'
 Set up Twilio:
 
@@ -62,7 +59,6 @@ Environment Variables:
 Set up environment variables for secure keys (e.g., Twilio credentials, encryption keys):
 
 bash
-Copy code
 export SECRET_KEY="your_secret_key"
 export TWILIO_ACCOUNT_SID="your_twilio_account_sid"
 export TWILIO_AUTH_TOKEN="your_twilio_auth_token"
@@ -70,18 +66,15 @@ export ENCRYPTION_KEY="your_generated_encryption_key"
 Initialize the Database:
 
 bash
-Copy code
 flask db init
 flask db migrate
 flask db upgrade
 Run the Application: Ensure SSL/TLS is set up for HIPAA compliance and run the app.
 
 bash
-Copy code
 flask run --cert=path_to_cert.pem --key=path_to_key.pem
 Project Structure
 bash
-Copy code
 /project_directory
 ├── app.py               # Main application file with routes and logic
 ├── requirements.txt     # Python package dependencies
