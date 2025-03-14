@@ -1,0 +1,76 @@
+erDiagram
+    USERS {
+        ObjectId _id PK
+        string username
+        string passwordHash
+        string userType
+        string firstName
+        string lastName
+        string email
+        string phone
+        string organizationId
+        array specialties
+        string patientId
+        object notificationPreferences
+        date lastActive
+        date createdAt
+        date updatedAt
+    }
+    
+    CONVERSATIONS {
+        ObjectId _id PK
+        array participants FK
+        string topic
+        date lastMessageAt
+        object metadata
+        date createdAt
+        date updatedAt
+        string organizationId
+    }
+    
+    MESSAGES {
+        ObjectId _id PK
+        ObjectId conversationId FK
+        ObjectId sender FK
+        string content
+        boolean isEncrypted
+        array readBy FK
+        array attachments
+        object metadata
+        date createdAt
+    }
+    
+    FILES {
+        ObjectId _id PK
+        string originalName
+        string encoding
+        string mimetype
+        number size
+        string filename
+        string path
+        ObjectId uploadedBy FK
+        ObjectId conversationId FK
+        string organizationId
+        date createdAt
+    }
+    
+    AUDIT_LOGS {
+        ObjectId _id PK
+        string action
+        ObjectId userId FK
+        string resourceType
+        string resourceId
+        object details
+        string ipAddress
+        string userAgent
+        date timestamp
+        string organizationId
+    }
+    
+    USERS ||--o{ CONVERSATIONS : "participates in"
+    CONVERSATIONS ||--o{ MESSAGES : "contains"
+    USERS ||--o{ MESSAGES : "sends"
+    USERS ||--o{ MESSAGES : "reads"
+    USERS ||--o{ FILES : "uploads"
+    CONVERSATIONS ||--o{ FILES : "contains"
+    USERS ||--o{ AUDIT_LOGS : "generates"
